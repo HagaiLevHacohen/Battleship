@@ -1,21 +1,21 @@
 import { Gameboard } from "./Gameboard";
 
 class Player {
-    #isComputer;
-    #gameboard;
+  #isComputer;
+  #gameboard;
 
-    constructor(isComputer = false) {
-        this.#isComputer = isComputer;
-        this.#gameboard = new Gameboard();
-    }
+  constructor(isComputer = false) {
+    this.#isComputer = isComputer;
+    this.#gameboard = new Gameboard();
+  }
 
-    get isComputer() {
-        return this.#isComputer;
-    }
+  get isComputer() {
+    return this.#isComputer;
+  }
 
-    get gameboard() {
-        return this.#gameboard;
-    }
+  get gameboard() {
+    return this.#gameboard;
+  }
 }
 
 export { Player };
