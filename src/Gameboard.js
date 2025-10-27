@@ -16,11 +16,11 @@ class Gameboard {
         this.#missedHitsList = [];
     }
 
-    get missedHits() {
+    get missedHitsList() {
     return [...this.#missedHitsList];
     }
 
-    get successfulHits() {
+    get successfulHitsList() {
         return [...this.#successfulHitsList];
     }
 

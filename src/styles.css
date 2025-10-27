@@ -1,0 +1,103 @@
+:root {
+  --board-length: 10;
+  --cell-size: 40px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.308);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.game > h1 {
+    font-size: 24px;
+    height: 30px;
+    text-align: center;
+}
+
+.game > .boards {
+    height: calc(var(--board-length) * var(--cell-size));
+
+    display: flex;
+    gap: 60px;
+}
+
+#computer-board {
+    display: none;
+}
+
+.board {
+    width: calc(var(--board-length) * var(--cell-size));
+
+    display: grid;
+
+    grid-template-columns: repeat(var(--board-length), var(--cell-size));
+    grid-template-rows: repeat(var(--board-length), var(--cell-size));
+}
+
+.cell {
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell.miss {
+    color: blue;
+}
+
+.cell.hit {
+    color: red;
+}
+
+
+.cell.preview {
+    background-color: grey;
+}
+
+.cell.carrier {
+    background-color: green;
+}
+
+.cell.battleship {
+    background-color: yellow;
+}
+
+.cell.submarine {
+    background-color: blue;
+}
+
+.cell.destroyer {
+    background-color: purple;
+}
